@@ -7,3 +7,9 @@
 .content-wrapper.hide {
     margin-left: 0;
 }
+
+.dashboard-top-sec {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
