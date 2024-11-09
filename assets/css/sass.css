@@ -13,9 +13,9 @@
     --header-height:3rem;
 
     /* ======== colors ======== */
-    --main-color:#c20d5a;
+    --main-color:#0d6efd;
     --second-color:rgb(7,3,45);
-    --main-grident: linear-gradient(121deg, rgba(194,13,90,1) 25%, rgb(255 0 194 / 42%) 100%);
+    --main-grident: linear-gradient(121deg, #0d6efd 25%, #3989ff57 100%);
     --dark-bg: #383848;
     --main-color-all:#af547d;
     --text-color:#707070;
