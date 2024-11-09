@@ -21,3 +21,7 @@ $(document).ready(function() {
         $(".content-wrapper").toggleClass('hide');
     })
 })
+
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );

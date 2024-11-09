@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/dataTables.dataTables.css" />
+    
+
+    <title>Admin | Welcome</title>
 </head>
 
 <body>
@@ -84,7 +87,8 @@
                 <nav class="animated bounceInDown">
                     <ul id="sidebar">
                         <li>
-                            <a href="#" class="active-sidenav"><i class="fa-solid fa-square-poll-vertical"></i>Dashboard</a>
+                            <a href="#" class="active-sidenav"><i
+                                    class="fa-solid fa-square-poll-vertical"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa-solid fa-calendar-check"></i>Academic Year</a>
@@ -128,26 +132,135 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-8">
-                            <div class="bg-white top-chart-earn">
-                                <div class="row">
-                                    <div class="col-sm-4">
+                            <div class="bg-white top-chart-earn p-4">
+
                                         <div class="last-month">
                                             <h5>Dashboard</h5>
-                                            <p>overview of last month</p>
-
-                                            <div class="eran">
-                                                <h4>$330.99</h4>
-                                                <p>Current Month Sales</p>
+                                            <div>
+                                                <div class="data-table-section table-responsive">
+                                                    <table id="myTable" class="display" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>Position</th>
+                                                                <th>Office</th>
+                                                                <th>Age</th>
+                                                                <th>Start date</th>
+                                                                <th>Salary</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>System Architect</td>
+                                                                <td>Edinburgh</td>
+                                                                <td>61</td>
+                                                                <td>2011-04-25</td>
+                                                                <td>$320,800</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Garrett Winters</td>
+                                                                <td>Accountant</td>
+                                                                <td>Tokyo</td>
+                                                                <td>63</td>
+                                                                <td>2011-07-25</td>
+                                                                <td>$170,750</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Ashton Cox</td>
+                                                                <td>Junior Technical Author</td>
+                                                                <td>San Francisco</td>
+                                                                <td>66</td>
+                                                                <td>2009-01-12</td>
+                                                                <td>$86,000</td>
+                                                            </tr>
+                                                          
+                                                            <tr>
+                                                                <td>Cara Stevens</td>
+                                                                <td>Sales Assistant</td>
+                                                                <td>New York</td>
+                                                                <td>46</td>
+                                                                <td>2011-12-06</td>
+                                                                <td>$145,600</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Hermione Butler</td>
+                                                                <td>Regional Director</td>
+                                                                <td>London</td>
+                                                                <td>47</td>
+                                                                <td>2011-03-21</td>
+                                                                <td>$356,250</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Lael Greer</td>
+                                                                <td>Systems Administrator</td>
+                                                                <td>London</td>
+                                                                <td>21</td>
+                                                                <td>2009-02-27</td>
+                                                                <td>$103,500</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Jonas Alexander</td>
+                                                                <td>Developer</td>
+                                                                <td>San Francisco</td>
+                                                                <td>30</td>
+                                                                <td>2010-07-14</td>
+                                                                <td>$86,500</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Shad Decker</td>
+                                                                <td>Regional Director</td>
+                                                                <td>Edinburgh</td>
+                                                                <td>51</td>
+                                                                <td>2008-11-13</td>
+                                                                <td>$183,000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Michael Bruce</td>
+                                                                <td>Javascript Developer</td>
+                                                                <td>Singapore</td>
+                                                                <td>29</td>
+                                                                <td>2011-06-27</td>
+                                                                <td>$183,000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Donna Snider</td>
+                                                                <td>Customer Support</td>
+                                                                <td>New York</td>
+                                                                <td>27</td>
+                                                                <td>2011-01-25</td>
+                                                                <td>$112,000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <!-- <tfoot>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>Position</th>
+                                                                <th>Office</th>
+                                                                <th>Age</th>
+                                                                <th>Start date</th>
+                                                                <th>Salary</th>
+                                                            </tr>
+                                                        </tfoot> -->
+                                                    </table>
+                                                </div>
                                             </div>
-                                            <a href="#" class="di-btn purple-gradient">Last Mnth Summary</a>
                                         </div>
-                                    </div>
-                                </div>
+                                    
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="bg-white p-4">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat obcaecati consequatur reiciendis minima quisquam, corporis sapiente. Praesentium sunt officia quasi possimus. Sapiente, necessitatibus modi dolorum consectetur ad molestiae animi perspiciatis error eum nostrum voluptatibus recusandae unde dolorem sit quo eius, excepturi nihil! Veniam impedit delectus, enim rerum sunt quia debitis. Repellat cumque dolor ex inventore at expedita sequi beatae reprehenderit autem nulla dolorem voluptate quos, nostrum, blanditiis mollitia suscipit? Impedit, cum hic non eos ullam alias officia similique aspernatur, est sint, maxime quisquam ab repudiandae sed dolores magnam minus nobis nostrum minima quaerat enim fugit voluptas labore quod. Quas, delectus.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat obcaecati
+                                    consequatur reiciendis minima quisquam, corporis sapiente. Praesentium sunt officia
+                                    quasi possimus. Sapiente, necessitatibus modi dolorum consectetur ad molestiae animi
+                                    perspiciatis error eum nostrum voluptatibus recusandae unde dolorem sit quo eius,
+                                    excepturi nihil! Veniam impedit delectus, enim rerum sunt quia debitis. Repellat
+                                    cumque dolor ex inventore at expedita sequi beatae reprehenderit autem nulla dolorem
+                                    voluptate quos, nostrum, blanditiis mollitia suscipit? Impedit, cum hic non eos
+                                    ullam alias officia similique aspernatur, est sint, maxime quisquam ab repudiandae
+                                    sed dolores magnam minus nobis nostrum minima quaerat enim fugit voluptas labore
+                                    quod. Quas, delectus.</p>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, quae!</p>
                             </div>
                         </div>
@@ -161,6 +274,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/dataTables.js"></script>
 </body>
 
 </html>
