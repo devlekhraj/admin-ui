@@ -15,7 +15,7 @@
     /* ======== colors ======== */
     --main-color:#c20d5a;
     --second-color:rgb(7,3,45);
-    --main-grident: linear-gradient(121dg, rgba(194,13,90,1) 25%, rgb(255 0 194 / 42%) 100%);
+    --main-grident: linear-gradient(121deg, rgba(194,13,90,1) 25%, rgb(255 0 194 / 42%) 100%);
     --dark-bg: #383848;
     --main-color-all:#af547d;
     --text-color:#707070;
@@ -125,19 +125,20 @@ table.table{
     border-radius: 3px;
     box-shadow: 0px 6px 19px 1px #06041d4a;
 }
-.purple-gradient{
-    background-color: var(--main-grident);
+.purple-grident{
+    background: var(--main-grident);
 }
 
 .bg-cla{
-    background-color: var(--main-color);
+    background: var(--main-color);
 }
 .bg-clc{
-    background: linear-gradient(121deg, rgb(92 26 195), rgb(136, 25 206 / 95%) 100%);
+    background: linear-gradient(121deg, rgb(92, 26, 195), rgba(136, 25, 206, 0.95) 100%);
 }
 .bg-clc{
-    background: linear-gradient(121deg, rgb(26 179 195), rgb(25, 97 206 / 95%) 100%);
+    background: linear-gradient(121deg, rgb(26, 179, 195), rgba(25, 97, 206, 0.95) 100%);
+
 }
 .bg-clc{
-    background: linear-gradient(121deg, rgb(232 202 53), rgb(206, 125 25 / 95%) 100%);
+    background: linear-gradient(121deg, rgb(232, 202, 53), rgba(206, 125, 25, 0.95) 100%);
 }
