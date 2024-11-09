@@ -1,0 +1,386 @@
+/* ============================== */
+/* GLOBAL VARIABLES AND CSS STARTS */
+/* ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+/* ================== variable css =========== */
+:root{
+    --header-height:3rem;
+    /* ======== colors ======== */
+    --main-color:#0d6efd;
+    --gray-color:#f8f9fa;
+    --second-color:rgb(7,3,45);
+    --black-color:rgb(7,3,45);
+    --main-grident: linear-gradient(121deg, #0d6efd 25%, #3989ff57 100%);
+    --dark-bg: #383848;
+    --main-color-all:#af547d;
+    --text-color:#707070;
+    --white-color:#ffffff;
+    --box-shadow: -1px 4px 20px #f1f1f185;
+    --white-alt:#e6e6e6;
+    --active-bg:#0d6efd29;
+    --bg-scrollbar:#9fc6ff;
+    /* ========== FONT AND TYPOGRAPHY====== */
+    --body-font: 'Poppins', sans-serif;
+    --bigger-font-size:2.25rem;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1rem;
+    --normal-font-size:.938rem;
+    --small-font-size:.813rem;
+    --smaller-font-size:.75rem;
+    /* ======== FONT WIDTH ====== */
+    --font-medium:500;
+    --font-semi-bold:600;
+    /* ======= MARGIN PADDING ====== */
+    --mb-1:.5rem;
+    --mb-2:1rem;
+    --mb-3:1.5rem;
+    --mb-4:2rem;
+    --mb-5:2.5rem;
+    --mb-6:3rem;
+    /* ============= z-index ==== */
+    --z-tooltip:10;
+    --z-fixed:100;
+}
+
+/* ============== css variable end ======= */
+/* ========================================= */
+
+/* =========== BASE STYLE STARTS ======== */
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--second-color);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--body-font);
+    line-height: 28px;
+    background: hsl(200deg 27% 98%);
+}
+img{
+    vertical-align: middle;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+    text-decoration: none;
+    color: var(--white-color);
+}
+ul, ol{
+    list-style: none;
+}
+button:focus{
+    outline: none;
+}
+/* ========= BASE STYLES ENDS ========= */
+/* ===================================== */
+h1,h2,h3,h4,h5,h6, p,ul,li,span,label{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+.ovh{
+    overflow: hidden;
+}
+table.table{
+    white-space: nowrap;
+}
+.di-btn{
+    color: aliceblue;
+    padding: .7rem var(--mb-2);
+    font-weight: 500;
+    border-radius: 3px;
+    box-shadow: 0px 6px 19px 1px #06041d4a;
+}
+.purple-grident{
+    background: var(--main-grident);
+}
+.bg-cla{
+    background: var(--main-color);
+}
+.bg-clc{
+    background: linear-gradient(121deg, rgb(92, 26, 195), rgba(136, 25, 206, 0.95) 100%);
+}
+.bg-clc{
+    background: linear-gradient(121deg, rgb(26, 179, 195), rgba(25, 97, 206, 0.95) 100%);
+
+}
+.bg-clc{
+    background: linear-gradient(121deg, rgb(232, 202, 53), rgba(206, 125, 25, 0.95) 100%);
+}
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--gray-color);
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: var(--bg-scrollbar);
+}
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: var(--gray-color);
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/* Parent container */
+body {
+    overflow-y: scroll;        /* Enables vertical scrolling */
+    scrollbar-width: 0;     /* Firefox - hides scrollbar */
+    -ms-overflow-style: 0;  /* Internet Explorer and Edge - hides scrollbar */
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+    display: none;             /* Hides scrollbar for Webkit browsers */
+}
+
+
+
+/* ============================== */
+/* GLOBAL VARIABLES AND CSS ENDS */
+/* ============================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================== */
+    /* LAYOUTS CSS STARTS */
+/* ============================== */
+
+.header-container {
+    background: #fff;
+    /* box-shadow: -1px 4px 20px #f1f1f185; */
+}
+header.header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.header-left {
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+}
+ul.navbar-item {
+    display: flex;
+}
+.dropdown {
+    position: relative;
+}
+.user-profile-dropdown {
+    margin-left: 20px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.nav-link.user {
+    padding: 5px 0;
+    font-size: 25px;
+    position: relative;
+}
+img.icon {
+    width: 35px;
+}
+/* logo */
+.logo {
+    width: 240px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 14px 0;
+    background: var(--main-grident);
+    color: var(--white-color);
+}
+a.sidebarCollapse {
+    padding-left: 16px;
+    color: var(--second-color);
+    font-size: 20px;
+}
+p.count {
+    position: absolute;
+    top: 0;
+    font-size: 10px;
+    color: var(--white-color);
+    height: 15px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+    right: -10px;
+}
+i.fa-regular.fa-bell,
+i.fa-solid.fa-gear {
+    font-size: 28px;
+}
+/* ======= dropdown ===== */
+.dropdown-menu {
+    position: absolute;
+    z-index: var(--z-fixed);
+    max-width: 15rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    border-radius: .25rem;
+    background: #fff;
+    box-shadow: -1px 4px 20px #f1f1f185;
+    border: 1px solid #f5f5f5;
+}
+/* ======== dashboard profile icon ====== */
+img.img-fluid.mr-2 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.media {
+    background: var(--main-color);
+    text-align: center;
+    padding-top: 10px;
+}
+.media-body {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.media-body h5 {
+    font-weight: 700;
+    color: var(--white-color);
+}
+.media-body p {
+    font-size: 13px;
+    color: var(--white-color);
+}
+a.dropdown-item i {
+    color: var(--main-color);
+    padding-right: 8px;
+}
+/* ========== SIDEBAR STARTS HERE ======== */
+.left-menu {
+    height: 100vh;
+    width: 240px;
+    position: fixed;
+    box-shadow: 3px -1px 19px 1px #efeeee;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: .5s;
+    margin-top: -14px;
+    background: var(--gray-color);
+    border-right: 1px solid #cbcbcb;
+}
+.left-menu.hide {
+    width: 0;
+}
+nav.animated {
+    position: relative;
+    width: 240px;
+}
+/* left sidebar */
+ul#sidebar {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar li a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black-color);
+    border-left: 5px solid #fff;
+}
+#sidebar li a:hover {
+    color: var(--main-color);
+    background: #f2f2f2;
+    border-left: 5px solid var(--main-color);
+}
+#sidebar li a.active-sidenav {
+    border-left: 5px solid var(--main-color);
+    color: var(--main-color);
+    background: var(--active-bg);
+}
+li.active a {
+    color: var(--main-color);
+    background: #f9f9f9;
+}
+ul#sidebar li a i {
+    padding-right: 8px;
+    font-size: 14px;
+    color: var(--main-color);
+}
+ul.left-menu-dp li{
+    border-left: 0 !important;
+}
+ul.left-menu-dp li a {
+    padding-left: 40px !important;
+}
+
+
+
+/* ============================== */
+    /* LAYOUTS CSS STARTS */
+/* ============================== */
+
+
+
+
+
+
+
+
+
+
+/* ============================== */
+    /* CUSTOM CSS STARTS */
+/* ============================== */
+.content-wrapper {
+    margin-left: 240px;
+    top: 20px;
+    margin-top: 70px;
+    transition: .5s;
+}
+.content-wrapper.hide {
+    margin-left: 0;
+}
