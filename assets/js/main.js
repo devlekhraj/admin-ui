@@ -7,16 +7,11 @@ $(document).on('click','#sidebar li a',function(e) {
 
 $(".sub-menu ul").hide();
 $(".sub-menu a").click(function() {
-    // Close all other submenus except the current one
-    // $(".sub-menu ul").not($(this).siblings("ul")).slideUp("100");
     $(".sub-menu a").not(this).find(".right").removeClass("fa-caret-up").addClass("fa-caret-down");
-    
     // Toggle the current submenu
     $(this).siblings("ul").slideToggle("100");
     $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
 });
-
-
 
 // =============== SIDEBAR TOGGLE ==========//
 
