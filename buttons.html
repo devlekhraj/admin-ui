@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Demo</title>
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Updated :root with provided CSS variables */
+        :root {
+            /* ======= Font Family ========== */
+            --font-family-body: "Nunito Sans", sans-serif;
+
+            /* ======= Primary Theme Color ======= */
+            --color-primary: #0D6EFD;
+            --color-secondary: #479BFF;
+
+            --color-gray: #D1D5DB;
+            --color-light-1: #0d6efd29;
+            --color-light-2: #f2f2f2;
+
+            --feedback-success-green: #34C759;
+            --feedback-warning-yellow: #FFC107;
+            --feedback-error-red: #FF3B30;
+            --inactive-muted-blue: #BCCCE6;
+
+            /* ======= Gradient Background Colors (No Button Gradient) ======= */
+            --gradient-primary: linear-gradient(121deg, var(--color-primary) 25%, #3989ff57 100%);
+            --gradient-secondary: linear-gradient(135deg, #479BFF, #A5CFFF);
+            --gradient-success: linear-gradient(135deg, #34C759, #28a745);
+            --gradient-warning: linear-gradient(135deg, #FFC107, #f7c900);
+            --gradient-error: linear-gradient(135deg, #FF3B30, #d32f2f);
+            --gradient-inactive: linear-gradient(135deg, #BCCCE6, #D1D5DB);
+
+            /* ======= Background and Text Colors ======= */
+            --bg-white: #FFFFFF;
+            --bg-light: #F4F6F8;
+            --bg-gray-light: #D1D5DB;
+
+            --bg-dark: #333333;
+            --bg-gray-dark: #9CA3AF;
+
+            --bg-scrollbar: #9fc6ff;
+
+            --bg-hover: #d0e4ff5c;
+
+            --text-primary: var(--color-primary);
+            --text-light: #FFFFFF;
+            --text-dark: #333333;
+            --text-gray: #f8f9fa;
+
+            --color-border-bottom: #e5e5e5;
+
+            /* ======= box shadow ========= */
+            --box-shadow-bottom: -1px 4px 20px #f1f1f185;
+            --box-shadow-right: 3px -1px 19px 1px #efeeee;
+
+            /* ======= Button Hover Colors ======= */
+            --hover-deep-blue: #0A58CA;
+        }
+
+        .btn {
+            font-weight: 600;
+            margin: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            color: var(--text-light);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Size Variants */
+        .btn-small {
+            font-size: 0.875em;
+            padding: 6px 12px;
+        }
+
+        .btn-medium {
+            font-size: 1em;
+            padding: 10px 14px;
+        }
+
+        .btn-large {
+            font-size: 1.125em;
+            padding: 12px 18px;
+        }
+
+        /* Primary Button */
+        .btn-primary {
+            background-color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--hover-deep-blue);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Secondary Button */
+        .btn-secondary {
+            background-color: var(--color-secondary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--hover-deep-blue);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Success Button */
+        .btn-success {
+            background-color: var(--feedback-success-green);
+        }
+
+        .btn-success:hover {
+            background-color: #28a745;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Warning Button */
+        .btn-warning {
+            background-color: var(--feedback-warning-yellow);
+            color: var(--text-dark);
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Error Button */
+        .btn-error {
+            background-color: var(--feedback-error-red);
+        }
+
+        .btn-error:hover {
+            background-color: #d32f2f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Inactive Button */
+        .btn-inactive {
+            background-color: var(--inactive-muted-blue);
+            color: var(--text-dark);
+            cursor: not-allowed;
+            opacity: 0.7;
+            box-shadow: none;
+        }
+
+        /* Round Icon Button */
+        .btn-icon {
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-icon-small {
+            width: 32px;
+            height: 32px;
+            font-size: 1em;
+        }
+
+        .btn-icon-medium {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2em;
+        }
+
+        .btn-icon-large {
+            width: 48px;
+            height: 48px;
+            font-size: 1.4em;
+        }
+
+        /* Variant Colors for Icon Button */
+        .btn-icon-primary {
+            background-color: var(--color-primary);
+        }
+
+        .btn-icon-primary:hover {
+            background-color: var(--hover-deep-blue);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-icon-secondary {
+            background-color: var(--color-secondary);
+        }
+
+        .btn-icon-secondary:hover {
+            background-color: var(--hover-deep-blue);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-icon-success {
+            background-color: var(--feedback-success-green);
+        }
+
+        .btn-icon-success:hover {
+            background-color: #28a745;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-icon-warning {
+            background-color: var(--feedback-warning-yellow);
+            color: var(--text-dark);
+        }
+
+        .btn-icon-warning:hover {
+            background-color: #e0a800;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-icon-error {
+            background-color: var(--feedback-error-red);
+        }
+
+        .btn-icon-error:hover {
+            background-color: #d32f2f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="display: flex; flex-wrap: wrap;">
+        
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap;">
+
+        <!-- Standard Buttons -->
+        <div>
+            <button class="btn btn-primary btn-small">Small Primary Button</button>
+            <button class="btn btn-secondary btn-small">Small Secondary Button</button>
+            <button class="btn btn-success btn-small">Small Success Button</button>
+            <button class="btn btn-warning btn-small">Small Warning Button</button>
+            <button class="btn btn-error btn-small">Small Error Button</button>
+            <button class="btn btn-inactive btn-small">Small Inactive Button</button>
+        </div>
+
+        <div>
+            <button class="btn btn-success btn-medium">Medium Success Button</button>
+            <button class="btn btn-primary btn-medium">Medium Primary Button</button>
+            <button class="btn btn-secondary btn-medium">Medium Secondary Button</button>
+            <button class="btn btn-warning btn-medium">Medium Warning Button</button>
+            <button class="btn btn-error btn-medium">Medium Error Button</button>
+            <button class="btn btn-inactive btn-medium">Medium Inactive Button</button>
+        </div>
+
+        <div>
+            <button class="btn btn-secondary btn-large">Large Secondary Button</button>
+            <button class="btn btn-primary btn-large">Large Primary Button</button>
+            <button class="btn btn-success btn-large">Large Success Button</button>
+            <button class="btn btn-warning btn-large">Large Warning Button</button>
+            <button class="btn btn-error btn-large">Large Error Button</button>
+            <button class="btn btn-inactive btn-large">Large Inactive Button</button>
+        </div>
+    </div>
+
+    <div style="display: flex;">
+
+        <!-- Small Buttons with Icons -->
+        <div>
+            <button class="btn btn-primary btn-small"><i class="fas fa-plus"></i> Small Primary Button</button>
+            <button class="btn btn-secondary btn-small"><i class="fas fa-minus"></i> Small Secondary Button</button>
+            <button class="btn btn-success btn-small"><i class="fas fa-check"></i> Small Success Button</button>
+            <button class="btn btn-warning btn-small"><i class="fas fa-exclamation"></i> Small Warning Button</button>
+            <button class="btn btn-error btn-small"><i class="fas fa-times"></i> Small Error Button</button>
+            <button class="btn btn-inactive btn-small"><i class="fas fa-ban"></i> Small Inactive Button</button>
+        </div>
+
+        <!-- Medium Buttons with Icons -->
+        <div>
+            <button class="btn btn-success btn-medium"><i class="fas fa-check"></i> Medium Success Button</button>
+            <button class="btn btn-primary btn-medium"><i class="fas fa-plus"></i> Medium Primary Button</button>
+            <button class="btn btn-secondary btn-medium"><i class="fas fa-minus"></i> Medium Secondary Button</button>
+            <button class="btn btn-warning btn-medium"><i class="fas fa-exclamation"></i> Medium Warning Button</button>
+            <button class="btn btn-error btn-medium"><i class="fas fa-times"></i> Medium Error Button</button>
+            <button class="btn btn-inactive btn-medium"><i class="fas fa-ban"></i> Medium Inactive Button</button>
+        </div>
+
+        <!-- Large Buttons with Icons -->
+        <div>
+            <button class="btn btn-secondary btn-large"><i class="fas fa-minus"></i> Large Secondary Button</button>
+            <button class="btn btn-primary btn-large"><i class="fas fa-plus"></i> Large Primary Button</button>
+            <button class="btn btn-success btn-large"><i class="fas fa-check"></i> Large Success Button</button>
+            <button class="btn btn-warning btn-large"><i class="fas fa-exclamation"></i> Large Warning Button</button>
+            <button class="btn btn-error btn-large"><i class="fas fa-times"></i> Large Error Button</button>
+            <button class="btn btn-inactive btn-large"><i class="fas fa-ban"></i> Large Inactive Button</button>
+        </div>
+    </div>
+
+    <br><br>
+    <div style="display: flex;">
+        <div>
+
+            <!-- Icon Buttons -->
+            <button class="btn btn-icon btn-icon-primary btn-icon-large">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-secondary btn-icon-large">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-success btn-icon-large">
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-warning btn-icon-large">
+                <i class="fas fa-exclamation"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-error btn-icon-large">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div>
+
+            <button class="btn btn-icon btn-icon-primary btn-icon-medium">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-secondary btn-icon-medium">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-success btn-icon-medium">
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-warning btn-icon-medium">
+                <i class="fas fa-exclamation"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-error btn-icon-medium">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+
+
+        <div>
+
+            <button class="btn btn-icon btn-icon-primary btn-icon-small">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-secondary btn-icon-small">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-success btn-icon-small">
+                <i class="fas fa-check"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-warning btn-icon-small">
+                <i class="fas fa-exclamation"></i>
+            </button>
+            <button class="btn btn-icon btn-icon-error btn-icon-small">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
